@@ -377,22 +377,114 @@
     -i 显示inode
 </code></pre><h3 id="权限操作"><a href="#权限操作" class="headerlink" title="权限操作"></a>权限操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod + xxx</span><br></pre></td></tr></table></figure>
 <p>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod + 777,chmod + 755</span><br></pre></td></tr></table></figure></p>
-<h3 id="常用目录说明"><a href="#常用目录说明" class="headerlink" title="常用目录说明"></a>常用目录说明</h3><p><table></table></p>
-<p><tr><br>    <th>目录名</th><br>    <th>作用</th><br></tr></p>
-<p><tr><br>    <td>/bin</td><br>    <td>根目录</td><br></tr></p>
-<p><tr><br>    <td>/dev</td><br>    <td>设备文件保存目录</td><br></tr></p>
-<p><tr><br>    <td>/etc</td><br>    <td>配置文件目录</td><br></tr></p>
-<p><tr><br>    <td>/home</td><br>    <td>普通用户家目录</td><br></tr></p>
-<p><tr><br>    <td>/lib</td><br>    <td>系统库目录</td><br></tr></p>
-<p><tr><br>    <td>/mnt</td><br>    <td>系统挂载目录</td><br></tr></p>
-<p><tr><br>    <td>/media</td><br>    <td>挂载目录</td><br></tr></p>
-<p><tr><br>    <td>/root</td><br>    <td>超级用户家目录</td><br></tr></p>
-<p><tr><br>    <td>/tmp</td><br>    <td>临时目录</td><br></tr></p>
-<p><tr><br>    <td>/sbin</td><br>    <td>超级用户命令保存目录</td><br></tr></p>
-<p><tr><br>    <td>/proc</td><br>    <td>直接写入内存目录</td><br></tr></p>
-<p><tr><br>    <td>/usr</td><br>    <td>系统软件资源目录</td><br></tr></p>
-<p><tr><br>    <td>/var</td><br>    <td>系统相关文档内容保存目录</td><br></tr></p>
-<p><tr><br>    <td>/bin</td><br>    <td>根目录</td><br></tr><br></p>
+<h3 id="常用目录说明"><a href="#常用目录说明" class="headerlink" title="常用目录说明"></a>常用目录说明</h3><!-- <table>
+<tr>
+    <th>目录名</th>
+    <th>作用</th>
+</tr>
+<tr>
+    <td>/bin</td>
+    <td>根目录</td>
+</tr>
+<tr>
+    <td>/dev</td>
+    <td>设备文件保存目录</td>
+</tr>
+<tr>
+    <td>/etc</td>
+    <td>配置文件目录</td>
+</tr>
+<tr>
+    <td>/home</td>
+    <td>普通用户家目录</td>
+</tr>
+<tr>
+    <td>/lib</td>
+    <td>系统库目录</td>
+</tr>
+<tr>
+    <td>/mnt</td>
+    <td>系统挂载目录</td>
+</tr>
+<tr>
+    <td>/media</td>
+    <td>挂载目录</td>
+</tr>
+<tr>
+    <td>/root</td>
+    <td>超级用户家目录</td>
+</tr>
+<tr>
+    <td>/tmp</td>
+    <td>临时目录</td>
+</tr>
+<tr>
+    <td>/sbin</td>
+    <td>超级用户命令保存目录</td>
+</tr>
+<tr>
+    <td>/proc</td>
+    <td>直接写入内存目录</td>
+</tr>
+<tr>
+    <td>/usr</td>
+    <td>系统软件资源目录</td>
+</tr>
+<tr>
+    <td>/var</td>
+    <td>系统相关文档内容保存目录</td>
+</tr>
+</table> -->
+<table>
+<thead>
+<tr>
+<th>目录名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/</td>
+<td>根目录</td>
+</tr>
+<tr>
+<td>/bin</td>
+<td>命令保存目录</td>
+</tr>
+<tr>
+<td>/boot</td>
+<td>启动目录</td>
+</tr>
+<tr>
+<td>/dev</td>
+<td>设备文件保存目录</td>
+</tr>
+<tr>
+<td>/etc</td>
+<td>配置文件保存目录</td>
+</tr>
+<tr>
+<td>/home</td>
+<td>普通用户家目录</td>
+</tr>
+<tr>
+<td>/root</td>
+<td>超级用户家目录</td>
+</tr>
+<tr>
+<td>/tmp</td>
+<td>临时目录</td>
+</tr>
+<tr>
+<td>/usr</td>
+<td>系统软件资源目录</td>
+</tr>
+<tr>
+<td>/var</td>
+<td>系统相关文档内容保存目录</td>
+</tr>
+</tbody>
+</table>
 <h2 id="目录处理命令"><a href="#目录处理命令" class="headerlink" title="目录处理命令"></a><font color="red">目录处理命令</font></h2><h3 id="建立目录命令"><a href="#建立目录命令" class="headerlink" title="建立目录命令"></a>建立目录命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p [目录名] #-p，递归创建目录</span><br></pre></td></tr></table></figure>
 <h3 id="切换目录"><a href="#切换目录" class="headerlink" title="切换目录"></a>切换目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd [目录]</span><br></pre></td></tr></table></figure>
 <p>简化操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ~ #进入当前用户的家目录</span><br><span class="line">cd - #进入上次目录</span><br><span class="line">cd .. #进入上级目录</span><br><span class="line">cd . #进入当前目录</span><br></pre></td></tr></table></figure></p>
@@ -540,7 +632,7 @@
             
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -551,7 +643,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
