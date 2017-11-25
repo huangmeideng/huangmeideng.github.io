@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="-虚拟技术 -Linux -PHP," />
+  <meta name="keywords" content="容器,linux,nginx,php,mysql," />
 
 
 
@@ -95,7 +95,7 @@
 
 
 <meta name="description" content="前言使用vagrant搭建开发环境可以避免团队开发带来的开发环境不一致问题，避免了很多不必要的麻烦，同时其分发机制也也有利于新来的同事立即部署适合于公司的开发环境，非常便利，是很多互联网公司的首选。因此，学习如何搭建基于vagrant的开发环境是很有必要的。">
-<meta name="keywords" content="-虚拟技术 -Linux -PHP">
+<meta name="keywords" content="容器,linux,nginx,php,mysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于Vagrant搭建lnmp开发环境">
 <meta property="og:url" content="http://kinano.top/2017/11/25/Vagrant-lnmp/index.html">
@@ -110,7 +110,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2017/11/25/WYKhj.png">
 <meta property="og:image" content="https://s1.ax1x.com/2017/11/25/WYQ9s.png">
 <meta property="og:image" content="https://s1.ax1x.com/2017/11/25/WYl3n.md.png">
-<meta property="og:updated_time" content="2017-11-25T01:08:34.603Z">
+<meta property="og:updated_time" content="2017-11-25T05:17:23.742Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于Vagrant搭建lnmp开发环境">
 <meta name="twitter:description" content="前言使用vagrant搭建开发环境可以避免团队开发带来的开发环境不一致问题，避免了很多不必要的麻烦，同时其分发机制也也有利于新来的同事立即部署适合于公司的开发环境，非常便利，是很多互联网公司的首选。因此，学习如何搭建基于vagrant的开发环境是很有必要的。">
@@ -226,6 +226,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -351,6 +361,17 @@
 
           
           
+             <span id="/2017/11/25/Vagrant-lnmp/" class="leancloud_visitors" data-flag-title="基于Vagrant搭建lnmp开发环境">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -371,7 +392,7 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用vagrant搭建开发环境可以避免团队开发带来的开发环境不一致问题，避免了很多不必要的麻烦，同时其分发机制也也有利于新来的同事立即部署适合于公司的开发环境，非常便利，是很多互联网公司的首选。因此，学习如何搭建基于vagrant的开发环境是很有必要的。<br><a id="more"></a></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>使用vagrant搭建开发环境可以避免团队开发带来的开发环境不一致问题，避免了很多不必要的麻烦，同时其分发机制也也有利于新来的同事立即部署适合于公司的开发环境，非常便利，是很多互联网公司的首选。因此，学习如何搭建基于vagrant的开发环境是很有必要的。<br><a id="more"></a></p>
 <h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2><p>Vagrant 是一个简单易用的部署工具，用英文说应该是 Orchestration Tool 。它能帮助开发人员迅速的构建一个开发环境，帮助测试人员构建测试环境, Vagrant 基于 Ruby 开发，使用开源 VirtualBox 作为虚拟化支持，可以轻松的跨平台部署。</p>
 <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ol>
 <li>vagrant安装 地址:<a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="noopener">https://www.vagrantup.com/downloads.html</a></li>
@@ -424,7 +445,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/虚拟技术-Linux-PHP/" rel="tag"># -虚拟技术 -Linux -PHP</a>
+            <a href="/tags/容器/" rel="tag"># 容器</a>
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
+            <a href="/tags/nginx/" rel="tag"># nginx</a>
+          
+            <a href="/tags/php/" rel="tag"># php</a>
+          
+            <a href="/tags/mysql/" rel="tag"># mysql</a>
           
         </div>
       
@@ -536,10 +565,10 @@
             
             
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -547,10 +576,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">3</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -559,6 +588,30 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/huangmeideng" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/huangmeideng" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
+                    
+                </a>
+              </span>
+            
           
         </div>
 
@@ -583,7 +636,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于"><span class="nav-number">1.1.</span> <span class="nav-text">关于</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#预备知识"><span class="nav-number">1.3.</span> <span class="nav-text">预备知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署环境"><span class="nav-number">1.4.</span> <span class="nav-text">部署环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装基础环境"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.安装基础环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-配置lnmp环境"><span class="nav-number">1.4.2.</span> <span class="nav-text">3.配置lnmp环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-配置vagrantfile"><span class="nav-number">1.4.3.</span> <span class="nav-text">4.配置vagrantfile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-打包分发"><span class="nav-number">1.4.4.</span> <span class="nav-text">5.打包分发</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于"><span class="nav-number">2.</span> <span class="nav-text">关于</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">3.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#预备知识"><span class="nav-number">4.</span> <span class="nav-text">预备知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署环境"><span class="nav-number">5.</span> <span class="nav-text">部署环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装基础环境"><span class="nav-number">5.1.</span> <span class="nav-text">1.安装基础环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-配置lnmp环境"><span class="nav-number">5.2.</span> <span class="nav-text">3.配置lnmp环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-配置vagrantfile"><span class="nav-number">5.3.</span> <span class="nav-text">4.配置vagrantfile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-打包分发"><span class="nav-number">5.4.</span> <span class="nav-text">5.打包分发</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -755,6 +808,113 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("Ti0VjYtvQ6UwTv6cgMKexoKQ-gzGzoHsz", "92r33fpAzstDPxcp7eqzoNrJ");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
