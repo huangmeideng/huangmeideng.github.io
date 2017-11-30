@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[PHP中魔术方法的使用]]></title>
+    <url>%2F2017%2F11%2F30%2Fmagical-fun%2F</url>
+    <content type="text"><![CDATA[自从php进入5.0版本以来，php以完全支持面向对象编程，使其开发效率愈加高效。同时其也引入了新的概念->魔术方法，以__开头的预定义方法，帮助我们更加高效进行程序地开发.1.__construct()构造方法，对象实例化时，让函数初始化。2.__destruct()析构函数，对象释放之前最后调用地函数，释放掉保存在对内存中的数据。3.__set()当对象中的成员为私有属性时，通过该方法可以直接设置成员属性的值4.__get()当对象的成员为私有属性时，通过该方法可以读取成员属性的值5.__isset()查看对象中私有属性是否存在6.__unset()直接删除对象中的私有属性7.__call()当对象调用类中不存在的方法时，可以通过类中的__call()方法来进行错误处理，防止程序报错终止8.__toString()当对对象进行输出时，调用该方法。比如echo \$obj;否则，发生致命错误9.__clone()当我们克隆一个对象时，可以通过__clone()方法中的\$this关键字对被克隆出来的对象进行初始化，而\$that关键字可以对原对象进行操作。10.__autoload()众多魔术方法中唯一一个不在类中使用的方法，该方法可以自动加载包含文件for example12345678910111213141516171819202122232425one.class.php&lt;?php class one &#123; function one()&#123;&#125;; &#125;?&gt;two.class.php&lt;?php class two &#123; function twon()&#123;&#125;; &#125;?&gt;three.class.php&lt;?php class three &#123; function three()&#123;&#125; &#125;?&gt;test.php&lt;?php function __autoreload($classname)&#123; include &quot;./&quot;.$classname.&quot;class.php&quot;; &#125;?&gt;这样执行test.php文件就可以自动包含以上三个文件了。 11.__sleep()当我们对某个对象进行序列化时（serialize()）,自动调用该函数，在该方法中返回一个数组，数组有几个成员，就序列化该几个成员。12.__wakeup()当我们对某个二进制文件进行反序列化时(unserialize())，自动调用该函数,自动调用该函数，对反序列化生成的对象进行初始化。13.__debuginfo()打印调试信息，该方法只在php5.6以上版本可用 还有很多的魔术方法笔者还没介绍，读者如果感兴趣，可自行查阅php手册进行学习php在线手册]]></content>
+      <categories>
+        <category>-php</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[使用PHP生成二维码]]></title>
     <url>%2F2017%2F11%2F29%2FPHP-QRcode%2F</url>
     <content type="text"><![CDATA[一二维码在现实生活中经常用的到，但二维码如何生成的呢？现在我们就开始学习啦！ 二从网上下载相应的工具包，链接,下载解压phpqrcode并放到项目目录中去。 三首先我们需要引用需要的文件1include &apos;./phpqrcode/qrlib.php 然后调用png函数就可以生成了1QRcode::png($text);//$text二维码文本 其中png()的参数有如下几种12345参数$text表示生成二位的的信息文本；参数$outfile表示是否输出二维码图片 文件，默认否；参数$level表示容错率，也就是有被覆盖的区域还能识别，分别是 L（QR_ECLEVEL_L，7%），M（QR_ECLEVEL_M，15%），Q（QR_ECLEVEL_Q，25%），H（QR_ECLEVEL_H，30%）；参数$size表示生成图片大小，默认是3；参数$margin表示二维码周围边框空白区域间距值；参数$saveandprint表示是否保存二维码并显示。 代码示例1QRcode::png(&quot;kinano&quot;,&quot;./qrpic/kinano.png&quot;,$level = QR_ECLEVEL_H,$size = 4,$margin = 0,$saveandprint = true); 四我们可以利用二维码生成电子名片，然后用微信扫码功能就能得到名片信息了。首先让我们了解电子名片的基本格式，请点击了解后我们就可以编写一个简单的电子名片了12345678910111213$content = &apos;BEGIN:VCARD&apos;.&quot;\n&quot;;$content.= &apos;VERSION:2,1&apos;.&quot;\n&quot;;$content.= &apos;N:荒&apos;.&quot;\n&quot;;//名片姓名$content.= &apos;FN:木超&apos;.&quot;\n&quot;;//名片名字$content.= &apos;ORG:福建福州&apos;.&quot;\n&quot;;//公司地址$content.= &apos;TEL;WORK;VOICE:18362985537&apos;.&quot;\n&quot;;//工作电话$content.= &apos;TEL;HOME;VOICE:18362985537&apos;.&quot;\n&quot;;//家庭电话$content.= &apos;TEL;TYPE=cell:18362985537&apos;.&quot;\n&quot;;//移动电话$content.= &apos;ADR;HOME:福建福州&apos;.&quot;\n&quot;;//地址$content.= &apos;EMAIL:1032467389@qq.com&apos;.&quot;\n&quot;;//邮件$content.= &apos;URL:www.kinano.top&apos;.&quot;\n&quot;;//个人网址$content.= &apos;END:VCARD&apos;.&quot;\n&quot;;QRcode::png($content); 完成后用微信扫描就可以看到自己的电子名片了]]></content>
@@ -32,10 +43,10 @@
         <category>-运维</category>
       </categories>
       <tags>
+        <tag>php</tag>
         <tag>容器</tag>
         <tag>linux</tag>
         <tag>nginx</tag>
-        <tag>php</tag>
         <tag>mysql</tag>
       </tags>
   </entry>
