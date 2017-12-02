@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Linux," />
+  <meta name="keywords" content="php,学习笔记," />
 
 
 
@@ -94,18 +94,21 @@
 
 
 
-<meta name="description" content="Linux一些基础命令地学习">
-<meta name="keywords" content="Linux">
+<meta name="description" content="前言自从php进入5.0版本以来，PHP开始全面地支持面向对象编程。嗯，谁说php很low。我们专注web开发好不好；谁说php代码烂，自己水平不行写的代码当然烂了；谁说php框架不优雅的，你用过laravel吗。好了，进入正题，面向对象的三大特性分别是封装性，继承性以及多态性，使用面向对象开发，让我们的程序可维护以及">
+<meta name="keywords" content="php,学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux学习">
-<meta property="og:url" content="http://kinano.top/2017/11/25/Linuxlearn/index.html">
+<meta property="og:title" content="PHP面向对象">
+<meta property="og:url" content="http://kinano.top/2017/12/02/PHP-OOP/index.html">
 <meta property="og:site_name" content="kinano的博客">
-<meta property="og:description" content="Linux一些基础命令地学习">
+<meta property="og:description" content="前言自从php进入5.0版本以来，PHP开始全面地支持面向对象编程。嗯，谁说php很low。我们专注web开发好不好；谁说php代码烂，自己水平不行写的代码当然烂了；谁说php框架不优雅的，你用过laravel吗。好了，进入正题，面向对象的三大特性分别是封装性，继承性以及多态性，使用面向对象开发，让我们的程序可维护以及扩展性大大提高。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-25T05:16:38.213Z">
+<meta property="og:image" content="http://ozy3pax09.bkt.clouddn.com/17-12-2/81341012.jpg">
+<meta property="og:image" content="http://ozy3pax09.bkt.clouddn.com/17-12-2/20221717.jpg">
+<meta property="og:updated_time" content="2017-12-02T15:05:49.668Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux学习">
-<meta name="twitter:description" content="Linux一些基础命令地学习">
+<meta name="twitter:title" content="PHP面向对象">
+<meta name="twitter:description" content="前言自从php进入5.0版本以来，PHP开始全面地支持面向对象编程。嗯，谁说php很low。我们专注web开发好不好；谁说php代码烂，自己水平不行写的代码当然烂了；谁说php框架不优雅的，你用过laravel吗。好了，进入正题，面向对象的三大特性分别是封装性，继承性以及多态性，使用面向对象开发，让我们的程序可维护以及扩展性大大提高。">
+<meta name="twitter:image" content="http://ozy3pax09.bkt.clouddn.com/17-12-2/81341012.jpg">
 
 
 
@@ -134,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://kinano.top/2017/11/25/Linuxlearn/"/>
+  <link rel="canonical" href="http://kinano.top/2017/12/02/PHP-OOP/"/>
 
 
 
 
 
-  <title>Linux学习 | kinano的博客</title>
+  <title>PHP面向对象 | kinano的博客</title>
   
 
 
@@ -327,7 +330,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://kinano.top/2017/11/25/Linuxlearn/">
+    <link itemprop="mainEntityOfPage" href="http://kinano.top/2017/12/02/PHP-OOP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kinano">
@@ -344,7 +347,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux学习</h1>
+          <h1 class="post-title" itemprop="name headline">PHP面向对象</h1>
         
 
         <div class="post-meta">
@@ -356,8 +359,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-25T02:12:45+08:00">
-                2017-11-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-02T15:55:09+08:00">
+                2017-12-02
               </time>
             
 
@@ -379,8 +382,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/运维/" itemprop="url" rel="index">
-                    <span itemprop="name">-运维</span>
+                  <a href="/categories/php/" itemprop="url" rel="index">
+                    <span itemprop="name">-php</span>
                   </a>
                 </span>
 
@@ -396,7 +399,7 @@
 
           
           
-             <span id="/2017/11/25/Linuxlearn/" class="leancloud_visitors" data-flag-title="Linux学习">
+             <span id="/2017/12/02/PHP-OOP/" class="leancloud_visitors" data-flag-title="PHP面向对象">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -413,10 +416,6 @@
           
 
           
-              <div class="post-description">
-                  Linux一些基础命令地学习
-              </div>
-          
 
         </div>
       </header>
@@ -431,179 +430,33 @@
       
 
       
-        <h1 id="Linux命令学习"><a href="#Linux命令学习" class="headerlink" title="Linux命令学习"></a>Linux命令学习</h1><hr>
-<h2 id="一些常识"><a href="#一些常识" class="headerlink" title="一些常识"></a><font color="red">一些常识</font></h2><h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>命令 [选项][参数]<br><a id="more"></a></p>
-<h3 id="查询目录中的内容"><a href="#查询目录中的内容" class="headerlink" title="查询目录中的内容"></a>查询目录中的内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls [选项][文件或目录]</span><br></pre></td></tr></table></figure>
-<pre><code>选项:
-    -a 显示所有文件，包括隐藏文件
-    -l 显示详细信息
-    -d 查看目录属性
-    -h 人性化显示文件大小
-    -i 显示inode
-</code></pre><h3 id="权限操作"><a href="#权限操作" class="headerlink" title="权限操作"></a>权限操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod + xxx</span><br></pre></td></tr></table></figure>
-<p>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod + 777,chmod + 755</span><br></pre></td></tr></table></figure></p>
-<h3 id="常用目录说明"><a href="#常用目录说明" class="headerlink" title="常用目录说明"></a>常用目录说明</h3><!-- <table>
-<tr>
-    <th>目录名</th>
-    <th>作用</th>
-</tr>
-<tr>
-    <td>/bin</td>
-    <td>根目录</td>
-</tr>
-<tr>
-    <td>/dev</td>
-    <td>设备文件保存目录</td>
-</tr>
-<tr>
-    <td>/etc</td>
-    <td>配置文件目录</td>
-</tr>
-<tr>
-    <td>/home</td>
-    <td>普通用户家目录</td>
-</tr>
-<tr>
-    <td>/lib</td>
-    <td>系统库目录</td>
-</tr>
-<tr>
-    <td>/mnt</td>
-    <td>系统挂载目录</td>
-</tr>
-<tr>
-    <td>/media</td>
-    <td>挂载目录</td>
-</tr>
-<tr>
-    <td>/root</td>
-    <td>超级用户家目录</td>
-</tr>
-<tr>
-    <td>/tmp</td>
-    <td>临时目录</td>
-</tr>
-<tr>
-    <td>/sbin</td>
-    <td>超级用户命令保存目录</td>
-</tr>
-<tr>
-    <td>/proc</td>
-    <td>直接写入内存目录</td>
-</tr>
-<tr>
-    <td>/usr</td>
-    <td>系统软件资源目录</td>
-</tr>
-<tr>
-    <td>/var</td>
-    <td>系统相关文档内容保存目录</td>
-</tr>
-</table> -->
-<table>
-<thead>
-<tr>
-<th>目录名</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>/</td>
-<td>根目录</td>
-</tr>
-<tr>
-<td>/bin</td>
-<td>命令保存目录</td>
-</tr>
-<tr>
-<td>/boot</td>
-<td>启动目录</td>
-</tr>
-<tr>
-<td>/dev</td>
-<td>设备文件保存目录</td>
-</tr>
-<tr>
-<td>/etc</td>
-<td>配置文件保存目录</td>
-</tr>
-<tr>
-<td>/home</td>
-<td>普通用户家目录</td>
-</tr>
-<tr>
-<td>/root</td>
-<td>超级用户家目录</td>
-</tr>
-<tr>
-<td>/tmp</td>
-<td>临时目录</td>
-</tr>
-<tr>
-<td>/usr</td>
-<td>系统软件资源目录</td>
-</tr>
-<tr>
-<td>/var</td>
-<td>系统相关文档内容保存目录</td>
-</tr>
-</tbody>
-</table>
-<h2 id="目录处理命令"><a href="#目录处理命令" class="headerlink" title="目录处理命令"></a><font color="red">目录处理命令</font></h2><h3 id="建立目录命令"><a href="#建立目录命令" class="headerlink" title="建立目录命令"></a>建立目录命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p [目录名] #-p，递归创建目录</span><br></pre></td></tr></table></figure>
-<h3 id="切换目录"><a href="#切换目录" class="headerlink" title="切换目录"></a>切换目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd [目录]</span><br></pre></td></tr></table></figure>
-<p>简化操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ~ #进入当前用户的家目录</span><br><span class="line">cd - #进入上次目录</span><br><span class="line">cd .. #进入上级目录</span><br><span class="line">cd . #进入当前目录</span><br></pre></td></tr></table></figure></p>
-<h3 id="删除目录"><a href="#删除目录" class="headerlink" title="删除目录"></a>删除目录</h3><p>删除空白目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmdir</span><br></pre></td></tr></table></figure></p>
-<p>删除目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf [文件或目录]</span><br></pre></td></tr></table></figure></p>
-<pre><code>选项：
-    -r 删除目录
-    -f 强制
-</code></pre><h3 id="复制命令"><a href="#复制命令" class="headerlink" title="复制命令"></a>复制命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp [选项][源文件或目录][目标文件或目录]</span><br></pre></td></tr></table></figure>
-<pre><code>选项：
-    -r 复制目录
-    -d 若原文件是链接文件，则复制链接属性
-    -p 同时复制文件的属性
-    -a 相当于-pdr
-</code></pre><h3 id="剪切或重命名"><a href="#剪切或重命名" class="headerlink" title="剪切或重命名"></a>剪切或重命名</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv [原文件或目录][目标目录]</span><br></pre></td></tr></table></figure>
-<h3 id="链接命令"><a href="#链接命令" class="headerlink" title="链接命令"></a>链接命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s [原文件][目标文件]</span><br></pre></td></tr></table></figure>
-<pre><code>功能：
-    生成链接文件
-    -s 创建软连接
-</code></pre><h2 id="搜索命令"><a href="#搜索命令" class="headerlink" title="搜索命令"></a><font color="red">搜索命令</font></h2><h3 id="命令搜索命令"><a href="#命令搜索命令" class="headerlink" title="命令搜索命令"></a>命令搜索命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whereis [选项][命令名]</span><br></pre></td></tr></table></figure>
-<pre><code>选项：
-    -b：只查找可执行文件
-    -m: 只查找帮助文件
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">which [文件名] #搜索命令所在路径与别名</span><br></pre></td></tr></table></figure>
-<h3 id="文件搜索命令"><a href="#文件搜索命令" class="headerlink" title="文件搜索命令"></a>文件搜索命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">locate [文件名] #在后台数据库中按文件名搜索，速度快</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/var/lib/mlocate #命令所在的后台数据库</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">updatedb #更新数据库</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find [选项][搜索范围][搜索条件]   #搜索条件可用通配符匹配,*匹配任意内容，?匹配任意字符,[]匹配任意括号内的内容</span><br></pre></td></tr></table></figure>
-<pre><code>选项
-    -i 不区分大小写
-    -nouser 找出垃圾文件
-    -atime -/+时间 (eg:find /home/www php.php -atime +10)文件访问时间
-    -ctime 改变文件属性时间
-    -mtine 文件修改时间
-    -size  -/+大小k/M 文件大小
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep [选项][字符串][文件名] #在文件当中匹配符合条件的字符串</span><br></pre></td></tr></table></figure>
-<pre><code>选项:
-    -i 忽略大小写
-    -v 排除指定字符串
-</code></pre><h2 id="帮助命令"><a href="#帮助命令" class="headerlink" title="帮助命令"></a><font color="red">帮助命令</font></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man [选项]命令 #获取指定命令的帮助</span><br></pre></td></tr></table></figure>
-<pre><code>选项:
-    -k 查看和命令相关的所有帮助
-    -数字 man的级别
-</code></pre><h2 id="压缩与解压命令"><a href="#压缩与解压命令" class="headerlink" title="压缩与解压命令"></a><font color="red">压缩与解压命令</font></h2><h3 id="zip格式"><a href="#zip格式" class="headerlink" title=".zip格式"></a>.zip格式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">zip 压缩文件名 原文件   #压缩文件</span><br><span class="line">zip -r 压缩文件名 源目录    #压缩目录</span><br><span class="line">unzip 压缩文件名     #解压缩文件</span><br></pre></td></tr></table></figure>
-<h3 id="gz格式"><a href="#gz格式" class="headerlink" title=".gz格式"></a>.gz格式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gzip 原文件    #压缩为.gz的文件，原文件会消失</span><br><span class="line">gzip -c 原文件 &gt; 压缩文件 #保留原文件</span><br><span class="line">gzip -r 目录   #压缩目录下的所有子文件，当是不能压缩目录</span><br><span class="line">gzip -d 压缩文件    #解压.gz文件</span><br><span class="line">gunzip 压缩文件     #解压.gz文件</span><br></pre></td></tr></table></figure>
-<h3 id="bz2格式"><a href="#bz2格式" class="headerlink" title=".bz2格式"></a>.bz2格式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bzip2 压缩文件    #压缩为.bz2格式，不保留原文件</span><br><span class="line">bzip2 -k 原文件    #保留原文件</span><br><span class="line">bzip2 -d 压缩文件   #解压文件</span><br><span class="line">bunzip2 压缩文件    #解压文件</span><br></pre></td></tr></table></figure>
-<h3 id="解打包文件"><a href="#解打包文件" class="headerlink" title="解打包文件"></a>解打包文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf 打包文件名    #先解压,然后解打包</span><br><span class="line">tar -zcvf 压缩包名.tar.gz 原文件    #压缩</span><br><span class="line">tar -zxvf 压缩包名.tar.gz    #解压缩</span><br><span class="line">tar -jcvf 压缩包名.tar.bz2 原文件 #压缩</span><br><span class="line">tar -jxvf 压缩包名.tar.bz2    #解压缩</span><br></pre></td></tr></table></figure>
-<h2 id="关机与重启命令"><a href="#关机与重启命令" class="headerlink" title="关机与重启命令"></a><font color="red">关机与重启命令</font></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shutdown [选项]时间</span><br></pre></td></tr></table></figure>
-<pre><code>选项:
-    -c 取消前一个关机命令
-    -h 关机
-    -r 重启
-</code></pre><p>其他关机命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">halt</span><br><span class="line">poweroff</span><br><span class="line">init 0</span><br></pre></td></tr></table></figure></p>
-<p>其他重启命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br><span class="line">init 6</span><br></pre></td></tr></table></figure></p>
+        <p><img src="http://ozy3pax09.bkt.clouddn.com/17-12-2/81341012.jpg" alt=""></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>自从php进入5.0版本以来，PHP开始全面地支持面向对象编程。嗯，谁说php很low。我们专注web开发好不好；谁说php代码烂，自己水平不行写的代码当然烂了；谁说php框架不优雅的，你用过laravel吗。好了，进入正题，面向对象的三大特性分别是封装性，继承性以及多态性，使用面向对象开发，让我们的程序可维护以及扩展性大大提高。<br><a id="more"></a></p>
+<h2 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h2><p><font color="blue" size="4">类</font>:具有相同属性或方法的一类集合体。比如雪佛兰汽车是一个雪佛兰汽车类，奔驰汽车是一个奔驰汽车类，宝马汽车是一个宝马汽车类，而这三个类又是汽车大类的子类。</p>
+<p><font color="blue" size="4">对象</font>:类的一个具体实现，比如宝马Q5就是宝马汽车类的一个具体实现。对象地使用是放在内存中的。一下让我们了解一下对象在内存中的分配<br><img src="http://ozy3pax09.bkt.clouddn.com/17-12-2/20221717.jpg" alt=""></p>
+<hr>
+<p>使用面向对象，就是灵活地使用以上两个知识点。让我们来创建和使用类与对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    /**</span><br><span class="line">    *新建一个类</span><br><span class="line">    */</span><br><span class="line">    class newClass&#123;</span><br><span class="line">        public $a;</span><br><span class="line">        public $b;</span><br><span class="line">        public function funA()&#123;</span><br><span class="line">            echo &quot;I am function A&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        public function funB()&#123;</span><br><span class="line">            echo &quot;I am function B&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    /**</span><br><span class="line">    *使用类创建对象</span><br><span class="line">    */</span><br><span class="line">    $opt=new newClass();</span><br><span class="line">    $opt-&gt;a=&quot;opt&quot;;//将opt对象中的a属性赋值为opt</span><br><span class="line">    $opt-&gt;funA();//打印出&quot;I am function A&quot;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure></p>
+<p><font color="blue" size="4">修饰符</font>:在定义类与类中的属性时，我们可以使用如下三个修饰符，若不加，则默认为public<br>public:权限最大<br>protected:权限范围在其本身与其子类<br>private:权限范围仅在其本身</p>
+<p><font color="blue" size="4">构造函数与析构函数</font>:在我们对类实例化创建对象时，往往需要对对象进行初始化，这时，我们就需要在类中定义一个构造方法。当我们使用完对象时，就需要释放对象，以减少内存的使用，这时我们就需要使用析构方法。<br>在php中我们使用__construct()方法与__destruct()，如下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    class newClass&#123;</span><br><span class="line">        public $a;</span><br><span class="line">        public $b;</span><br><span class="line">        public function __construct($a,$b)&#123;</span><br><span class="line">            $this-&gt;a=$a;</span><br><span class="line">            $this-&gt;b=$b;</span><br><span class="line">            echo &quot;我是构造函数&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        public function __destruct()&#123;</span><br><span class="line">            echo &quot;我是析构函数&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="封装性"><a href="#封装性" class="headerlink" title="封装性"></a>封装性</h2><p>当我们开发一些重要的程序模块时，常常不希望别人能轻易访问这些程序模块的数据，因此需要对这些数据进行封装。这时我们要进行数据的访问控制，常常使用<font color="red">private</font>关键字来对这些属性与方法进行封装。<br>如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    class privateClass&#123;</span><br><span class="line">        private $a;</span><br><span class="line">        private $b;</span><br><span class="line">        private function privateFun()&#123;</span><br><span class="line">            echo &quot;我是封装的方法&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure></p>
+<p>这样，当我们创建对象时就不能调用私有的属性与方法。但是我们可以通过使用魔术方法来对这些私有属性与方法进行访问。</p>
+<p><font color="blue">__set()与__get()的使用</font><br>通过__set()方法我们可以通过对象直接设置成员属性值<br>通过__get()方法我们可以通过对象直接获取成员属性值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    class setClass&#123;</span><br><span class="line">        private $a;</span><br><span class="line">        private $b=&quot;ww&quot;;</span><br><span class="line">        public function __set($oldValue,$newvalue)&#123;</span><br><span class="line">            $this-&gt;$oldValue=$newvalue;</span><br><span class="line">        &#125;</span><br><span class="line">        public function __get($newvalue)&#123;</span><br><span class="line">            return $newvalue;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    $opt= new setClass();</span><br><span class="line">    $opt-&gt;a=&quot;sss&quot;;//直接设置私有属性值</span><br><span class="line">    echo $opt-&gt;b;//直接读取私有属性值</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure></p>
+<p><font color="blue">__isset()与__unset()的使用</font><br>通过__isset()直接查看对象中私有属性是否存在<br>通过__unset()直接删除对象中的私有属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    class issetClass&#123;</span><br><span class="line">        private $a;</span><br><span class="line">        private $b=&apos;www&apos;;</span><br><span class="line">        function __isset($privateName)&#123;</span><br><span class="line">            if(isset($privateName))&#123;</span><br><span class="line">                return 1;</span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                return 0;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        function __unset($privateName)&#123;</span><br><span class="line">            echo &quot;销毁&quot;.$privateName;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    $opt = new issetClass();</span><br><span class="line">    echo isset($opt-&gt;$b);</span><br><span class="line">    var_dump(unset($opt-&gt;$b));</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h2><p>当我们编写多个类时，常常多个类具有相同的属性与方法，为了简化代码我们引入了继承的概念，子类可以继承父类的一些属性与方法，减少了冗余代码地编写。</p>
+<hr>
+<ol>
+<li><p><font color="blue" size="4">如何编写继承类</font><br> 我们使用关键字extends来编写子类</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">class parentClass&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">class childClass extends parentClass&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<p> 如上，childClass是parentClass的子类，php仅支持单继承，即一个子类只有一个父类，但父类可以有多个子类。</p>
+</li>
+<li><font color="blue" size="4">重写父类方法</font><br> 当父类中的方法不能满足子类的使用时我们可以重写父类方法。但当我们又想在子类使用父类的方法时，我们可以使用如下语法:parent::方法名</li>
+<li><font color="blue" size="4">几个重要的关键字</font><br>3.1 <font color="blue" size="3">final</font><br> final可以修饰类与方法，不能修饰成员属性；<br> 被final修饰的类不能继承，而用final修饰的方法在子类中不能被重写<br>3.2 <font color="blue" size="3">static</font><br> static可以修饰成员属性与成员方法，不能修饰类；<br> 使用static修饰的成员与方法可以通过类直接使用，使用如下语法：类名::\$属性名或方法名()；<br> 在类中使用时通过如下语法:self::\$属性名或方法名.<br>3.3 <font color="blue" size="3">const</font><br> 在类中声明常量使用const,而不是使用define();<br> 比如 const TT=90<br> 当使用常量时直接使用如下语法self::常量名<br>3.4 <font color="blue" size="3">instanceof</font><br> 使用该关键字可以检测某个实例是否是某个类的实例。<br>3.5 <font color="blue" size="3">trait</font><br> php只能进行单继承，但它同时提供了另类方式来进行代码复用，解决单继承问题。<br> 如下 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">  trait testA&#123;</span><br><span class="line">      function a()&#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  trait testB&#123;</span><br><span class="line">      function b()&#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  class testC&#123;</span><br><span class="line">      use testA,testB;</span><br><span class="line">      function c()&#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  ?&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="抽象技术"><a href="#抽象技术" class="headerlink" title="抽象技术"></a>抽象技术</h2><p>用abstract关键字修饰的方法与类称为抽象方法或抽象类。<br>声明抽象类与抽象方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    abstract class testClass&#123;</span><br><span class="line">        $a;</span><br><span class="line">        $b;</span><br><span class="line">        abstract function testFun();</span><br><span class="line">        abstract function testFun1();</span><br><span class="line">        public function optFun()&#123;</span><br><span class="line">            echo &quot;抽象类中的抽象方法&quot;;</span><br><span class="line">        &#125;//抽象类可以有非抽象方法</span><br><span class="line">    &#125;</span><br><span class="line">    class childClass extends testClass&#123;</span><br><span class="line">        function testFun()&#123;</span><br><span class="line">            echo &quot;子类中实现抽象方法&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        function testFun1()&#123;</span><br><span class="line">            echo &quot;子类实现抽象方法&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    abstract child1Class extends testClass&#123;</span><br><span class="line"></span><br><span class="line">    &#125;//子类是抽象方法可以不实现父类的抽象方法</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure></p>
+<p>抽象技术为子类的声明提供了一种规范，限制了类的实例化(抽象类不能实例化)。</p>
+<h2 id="接口技术"><a href="#接口技术" class="headerlink" title="接口技术"></a>接口技术</h2><p>接口是一种特殊的抽象类，接口中只能声明<font color="blue" size="4">抽象类与常量</font>。<br>声明接口使用interface,实现接口使用implements,修饰符只能是默认的public;<br>一个子类可以继承多个接口,同时继承一个父类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    interface newInterface&#123;</span><br><span class="line">        const V=12;</span><br><span class="line">        abstract function fun1();</span><br><span class="line">        abstract function fun2();</span><br><span class="line">    &#125;</span><br><span class="line">    interface newInterface1&#123;</span><br><span class="line">        abstract function fun3();</span><br><span class="line">        abstract function fun4();</span><br><span class="line">    &#125;</span><br><span class="line">    class parentClass&#123;</span><br><span class="line">        function fun5()&#123;</span><br><span class="line">            echo &quot;fun5&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    class optClass extends parentClass implements newInterface,newINterface1&#123;</span><br><span class="line">        function fun1()&#123;</span><br><span class="line">            echo &quot;fun1&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        function fun2()&#123;</span><br><span class="line">            echo &quot;fun2&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        function fun3()&#123;</span><br><span class="line">            echo &quot;fun3&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        function fun4()&#123;</span><br><span class="line">            echo &quot;fun4&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><p>在php中多态地实现需要一个类通过多个子类地继承实现，如果一个类的方法在多个子类中重写并实现不同的功能，我们称之为多态。</p>
 
       
     </div>
@@ -623,7 +476,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
+            <a href="/tags/php/" rel="tag"># php</a>
+          
+            <a href="/tags/学习笔记/" rel="tag"># 学习笔记</a>
           
         </div>
       
@@ -636,15 +491,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/11/30/magical-fun/" rel="next" title="PHP中魔术方法的使用">
+                <i class="fa fa-chevron-left"></i> PHP中魔术方法的使用
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/25/Vagrant-lnmp/" rel="prev" title="基于Vagrant搭建lnmp开发环境">
-                基于Vagrant搭建lnmp开发环境 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -856,7 +711,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux命令学习"><span class="nav-number">1.</span> <span class="nav-text">Linux命令学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些常识"><span class="nav-number">1.1.</span> <span class="nav-text">一些常识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令格式"><span class="nav-number">1.1.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询目录中的内容"><span class="nav-number">1.1.2.</span> <span class="nav-text">查询目录中的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#权限操作"><span class="nav-number">1.1.3.</span> <span class="nav-text">权限操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用目录说明"><span class="nav-number">1.1.4.</span> <span class="nav-text">常用目录说明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录处理命令"><span class="nav-number">1.2.</span> <span class="nav-text">目录处理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#建立目录命令"><span class="nav-number">1.2.1.</span> <span class="nav-text">建立目录命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#切换目录"><span class="nav-number">1.2.2.</span> <span class="nav-text">切换目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除目录"><span class="nav-number">1.2.3.</span> <span class="nav-text">删除目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制命令"><span class="nav-number">1.2.4.</span> <span class="nav-text">复制命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#剪切或重命名"><span class="nav-number">1.2.5.</span> <span class="nav-text">剪切或重命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链接命令"><span class="nav-number">1.2.6.</span> <span class="nav-text">链接命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搜索命令"><span class="nav-number">1.3.</span> <span class="nav-text">搜索命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令搜索命令"><span class="nav-number">1.3.1.</span> <span class="nav-text">命令搜索命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件搜索命令"><span class="nav-number">1.3.2.</span> <span class="nav-text">文件搜索命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#帮助命令"><span class="nav-number">1.4.</span> <span class="nav-text">帮助命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩与解压命令"><span class="nav-number">1.5.</span> <span class="nav-text">压缩与解压命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#zip格式"><span class="nav-number">1.5.1.</span> <span class="nav-text">.zip格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gz格式"><span class="nav-number">1.5.2.</span> <span class="nav-text">.gz格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bz2格式"><span class="nav-number">1.5.3.</span> <span class="nav-text">.bz2格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解打包文件"><span class="nav-number">1.5.4.</span> <span class="nav-text">解打包文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关机与重启命令"><span class="nav-number">1.6.</span> <span class="nav-text">关机与重启命令</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本知识"><span class="nav-number">2.</span> <span class="nav-text">基本知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装性"><span class="nav-number">3.</span> <span class="nav-text">封装性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#继承性"><span class="nav-number">4.</span> <span class="nav-text">继承性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象技术"><span class="nav-number">5.</span> <span class="nav-text">抽象技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口技术"><span class="nav-number">6.</span> <span class="nav-text">接口技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多态"><span class="nav-number">7.</span> <span class="nav-text">多态</span></a></li></ol></div>
             
 
           </div>
