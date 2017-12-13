@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[清楚浮动]]></title>
+    <url>%2F2017%2F12%2F13%2Ffloat-clear%2F</url>
+    <content type="text"><![CDATA[浮动产生的原因当我们在一个盒子模型中使用float\:left与float\:right属性时，由于float使子元素脱离文档流导致父元素不能随子元素撑开，导致如果我们给父元素设置了背景色，边框，内外边距等属性时，这些属性不能很好的呈现出来。 解决浮动的三种方式一.给父元素设定固定的高度我们可以根据浮动元素的高度，给父元素设定一定的高度，不过这种方式会导致父元素不能根据子元素的内容自适应高度，不提倡使用。 二.添加一个子元素,并使用clear属性在父元素中添加一个空白子元素，并设置子元素的clear属性为both,如果浏览器要适应IE6浏览器，应该在样式中同时添加height\:0,overflow:hidden。不过该方式会添加多余的标签，同样不推荐使用 三.在父元素中添加overflow属性在父级元素中添加overflow\:hidden属性，使父元素可以紧贴浮动的子元素，这样也可以消除浮动，该方法推荐使用.]]></content>
+      <categories>
+        <category>-前端</category>
+      </categories>
+      <tags>
+        <tag>float</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[php安装redis扩展]]></title>
     <url>%2F2017%2F12%2F08%2Fredis-php%2F</url>
     <content type="text"><![CDATA[redis是一种非关系型数据库，现如今，越来越多的业务要求使用缓存。开发php应用使用缓存技术是非常有必要。现在我们就来学习如何安装redis并开启php的redis模块。*注 由于笔者的开发环境是基于Linux的，因此本文主要讲解lnmp下的redis安装 安装redis12345$ wget http://download.redis.io/releases/redis-4.0.6.tar.gz$ tar xzf redis-4.0.6.tar.gz$ cd redis-4.0.6$ make$ sudo make install 编译完成后,通过命令which redis-server就可以查看redis的安装目录如下/usr/local/bin/redis-server。接下来我们对开始对redis进行配置，使用如下命令将配置文件复制到指定目录1$sudo cp redis.conf /home/softwareconfig/redis/redis.conf 然后通过vim命令编辑redis.conf,将daemonize no改为daemonize yes表示后台启动。之后启动redis,如下命令1sudo rerdis-server /usr/local/bin/redis-server /home/softwareconfig/redis/redis.conf 我们可以通过如下命令验证redis服务是否开启1ps aux|grep redis-server 之后我们可以通过redis-cli命令进入客户端进行操作，exit命令退出客户端 安装php的redis扩展12345$ wget https://github.com/phpredis/phpredis/archive/3.1.4.tar.gz$ cd phpredis-3.1.4 # 进入 phpredis 目录$ /usr/local/php/bin/phpize # php安装后的路径$ ./configure --with-php-config=/usr/local/php/bin/php-config$ make &amp;&amp; make install 如果系统没有phpize某块，我们可以通过如下命令安装1$sudo apt-get install php5-dev 之后找到php的配置文件php.ini,在某位添加如下代码extension=redis.so。这样，我们就完成了redis扩展地安装。之后重启php与nginx服务器便可。]]></content>
