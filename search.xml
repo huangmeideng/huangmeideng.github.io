@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[665.non-decreasing Array]]></title>
+    <url>%2F2017%2F12%2F25%2F665-non-decreasing-Arrat%2F</url>
+    <content type="text"><![CDATA[665.non-decreasing Arrar原题Given an array with n integers, your task is to check if it could become non-decreasing by modifying at most 1 element. We define an array is non-decreasing if array[i] &lt;= array[i + 1] holds for every i (1 &lt;= i &lt; n). Example1123Input: [4,2,3]Output: TrueExplanation: You could modify the first 4 to 1 to get a non-decreasing array. Example2123Input: [4,2,1]Output: FalseExplanation: You can&apos;t get a non-decreasing array by modify at most one element. 讲解该题给我们任意一个数组，并允许我们只修改其中一个数字，使其变成一个非递减的数组。如果可以返回true,否则返回false。解题思路在于当nums[i]\&lt;nums[i-1]时如何更改数字。当num[i-1]前面的数字不存在或者同时也小于nums[i]时,这时将nums[i-1]值改为nums[i]。否则将nums[i]值改为nums[i-1].由于我们只有一次修改机会，设置变量chance为1,修改完成后自减，下次如需再次修改则无法成功返回false。一下为源码。 JavaScript12345678910111213141516171819202122/** * @param &#123;number[]&#125; nums * @return &#123;boolean&#125; */var checkPossibility = function(nums) &#123; var chance=1; for(var i=1;i&lt;nums.length;i++)&#123; if(nums[i]&lt;nums[i-1])&#123; if(chance==0)&#123; return false; &#125;else&#123; if(i-2&lt;0||nums[i-2]&lt;nums[i])&#123; nums[i-1]=nums[i]; &#125;else&#123; nums[i]=nums[i-1]; &#125; chance--; &#125; &#125; &#125; return true;&#125;;]]></content>
+      <categories>
+        <category>-leetcode</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[清楚浮动]]></title>
     <url>%2F2017%2F12%2F13%2Ffloat-clear%2F</url>
     <content type="text"><![CDATA[浮动产生的原因当我们在一个盒子模型中使用float\:left与float\:right属性时，由于float使子元素脱离文档流导致父元素不能随子元素撑开，导致如果我们给父元素设置了背景色，边框，内外边距等属性时，这些属性不能很好的呈现出来。 解决浮动的三种方式一.给父元素设定固定的高度我们可以根据浮动元素的高度，给父元素设定一定的高度，不过这种方式会导致父元素不能根据子元素的内容自适应高度，不提倡使用。 二.添加一个子元素,并使用clear属性在父元素中添加一个空白子元素，并设置子元素的clear属性为both,如果浏览器要适应IE6浏览器，应该在样式中同时添加height\:0,overflow:hidden。不过该方式会添加多余的标签，同样不推荐使用 三.在父元素中添加overflow属性在父级元素中添加overflow\:hidden属性，使父元素可以紧贴浮动的子元素，这样也可以消除浮动，该方法推荐使用.]]></content>
