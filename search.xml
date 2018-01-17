@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[nginx配置pathinfo访问模式以及多站点]]></title>
+    <url>%2F2018%2F01%2F17%2Fnginx-set%2F</url>
+    <content type="text"><![CDATA[最近使用ThinkPHP,偏偏自己又使用nginx服务器。由于nginx无法使用pathinfo模式，给我带来了很大的困扰，几经周折终于解决了。所以打算记录一下，以免以后遇到相同的问题又满世界找答案。 nginx配置编写123456789101112131415161718192021server &#123; listen 80; #监听端口号 root /home/www/ShopServer/public; #TP5项目中index.php所在目录 index index.html index.php; #文件类型 server_name location; location /&#123; try_files $uri $uri/ /index.php?s=$uri; #核心配置，让本来的兼容模式转发为pathinfo &#125; location ~ \.php$ &#123; fastcgi_split_path_info ^(.+\.php)(/.+)$; fastcgi_pass 127.0.0.1:9000 fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; fastcgi_index index.php; include fastcgi_params; &#125;&#125; 这样就可以让nginx支持TP5的pathinfo模式了。 多站点设置在本地进行站点配置对web的开发是大有益处的，我们通过对不同项目的nginx配置可以实现多站点配置。12#进入nginx文件夹进行配置文件的编写$cd /etc/nginx 可以看到有很多文件夹，默认的启用配置文件夹在sites-enabled的default文件中，由于我们使用多站点配置，无需理会。我们要在conf.d文件夹中通过建立.conf的配置文件实现多站点。比如我们有两个TP5项目，tp1和tp2在/home/www中，这我们在conf.d文件夹中新建两个名为tp1.conf和tp2.conf的配置文件。分别为如下配置。 tp1.conf 123456789101112131415161718192021 server &#123; listen 80; #监听端口号 root /home/www/tp1/public; #TP5项目中index.php所在目录 index index.html index.php; #文件类型 server_name tp1.test; location /&#123; try_files $uri $uri/ /index.php?s=$uri; #核心配置，让本来的兼容模式转发为pathinfo &#125; location ~ \.php$ &#123; fastcgi_split_path_info ^(.+\.php)(/.+)$; fastcgi_pass 127.0.0.1:9000 fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; fastcgi_index index.php; include fastcgi_params; &#125;&#125; tp2.conf 123456789101112131415161718192021 server &#123; listen 80; #监听端口号 root /home/www/tp2/public; #TP5项目中index.php所在目录 index index.html index.php; #文件类型 server_name tp2.test; location /&#123; try_files $uri $uri/ /index.php?s=$uri; #核心配置，让本来的兼容模式转发为pathinfo &#125; location ~ \.php$ &#123; fastcgi_split_path_info ^(.+\.php)(/.+)$; fastcgi_pass 127.0.0.1:9000 fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; fastcgi_index index.php; include fastcgi_params; &#125;&#125; 然后在主机的host文件添加两个域名1234#我的主机为windows，故目录在c/windows/system32/drivers/etc/host127.0.0.1 tp1.test127.0.0.1 tp2.test 这样就实现了多站点，方便了调试。]]></content>
+      <categories>
+        <category>-运维</category>
+      </categories>
+      <tags>
+        <tag>nginx</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[665.non-decreasing Array]]></title>
     <url>%2F2017%2F12%2F25%2F665-non-decreasing-Arrat%2F</url>
     <content type="text"><![CDATA[665.non-decreasing Arrar原题Given an array with n integers, your task is to check if it could become non-decreasing by modifying at most 1 element. We define an array is non-decreasing if array[i] &lt;= array[i + 1] holds for every i (1 &lt;= i &lt; n). Example1123Input: [4,2,3]Output: TrueExplanation: You could modify the first 4 to 1 to get a non-decreasing array. Example2123Input: [4,2,1]Output: FalseExplanation: You can&apos;t get a non-decreasing array by modify at most one element. 讲解该题给我们任意一个数组，并允许我们只修改其中一个数字，使其变成一个非递减的数组。如果可以返回true,否则返回false。解题思路在于当nums[i]\&lt;nums[i-1]时如何更改数字。当num[i-1]前面的数字不存在或者同时也小于nums[i]时,这时将nums[i-1]值改为nums[i]。否则将nums[i]值改为nums[i-1].由于我们只有一次修改机会，设置变量chance为1,修改完成后自减，下次如需再次修改则无法成功返回false。一下为源码。 JavaScript12345678910111213141516171819202122/** * @param &#123;number[]&#125; nums * @return &#123;boolean&#125; */var checkPossibility = function(nums) &#123; var chance=1; for(var i=1;i&lt;nums.length;i++)&#123; if(nums[i]&lt;nums[i-1])&#123; if(chance==0)&#123; return false; &#125;else&#123; if(i-2&lt;0||nums[i-2]&lt;nums[i])&#123; nums[i-1]=nums[i]; &#125;else&#123; nums[i]=nums[i-1]; &#125; chance--; &#125; &#125; &#125; return true;&#125;;]]></content>
@@ -115,9 +126,9 @@
       </categories>
       <tags>
         <tag>php</tag>
+        <tag>nginx</tag>
         <tag>容器</tag>
         <tag>linux</tag>
-        <tag>nginx</tag>
         <tag>mysql</tag>
       </tags>
   </entry>
