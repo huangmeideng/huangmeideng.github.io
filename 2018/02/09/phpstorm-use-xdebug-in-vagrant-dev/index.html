@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="php,vagrant,phpstorm," />
 
 
 
@@ -94,16 +94,26 @@
 
 
 
-<meta name="description" content="kinano的个人博客，发布一系列有趣的东西">
-<meta property="og:type" content="website">
-<meta property="og:title" content="kinano的博客">
-<meta property="og:url" content="http://kinano.top/archives/2017/11/index.html">
+<meta name="description" content="作为一名合格的php工程师，掌握调试程序的方法是必须要掌握的，而php的Xdebug是一项非常便利的debug工具。现在就让我们在基于vagrant环境下配置xdebug。">
+<meta name="keywords" content="php,vagrant,phpstorm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于vagrant的lnmp环境使用Xdebug">
+<meta property="og:url" content="http://kinano.top/2018/02/09/phpstorm-use-xdebug-in-vagrant-dev/index.html">
 <meta property="og:site_name" content="kinano的博客">
-<meta property="og:description" content="kinano的个人博客，发布一系列有趣的东西">
+<meta property="og:description" content="作为一名合格的php工程师，掌握调试程序的方法是必须要掌握的，而php的Xdebug是一项非常便利的debug工具。现在就让我们在基于vagrant环境下配置xdebug。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ozy3pax09.bkt.clouddn.com/18-2-9/55046307.jpg">
+<meta property="og:image" content="http://ozy3pax09.bkt.clouddn.com/18-2-9/3650616.jpg">
+<meta property="og:image" content="http://ozy3pax09.bkt.clouddn.com/18-2-9/57593709.jpg">
+<meta property="og:image" content="http://ozy3pax09.bkt.clouddn.com/18-2-9/34396229.jpg">
+<meta property="og:image" content="http://ozy3pax09.bkt.clouddn.com/18-2-9/85717455.jpg">
+<meta property="og:image" content="http://ozy3pax09.bkt.clouddn.com/18-2-9/84896193.jpg">
+<meta property="og:image" content="http://ozy3pax09.bkt.clouddn.com/18-2-9/72638932.jpg">
+<meta property="og:updated_time" content="2018-02-09T05:47:26.046Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="kinano的博客">
-<meta name="twitter:description" content="kinano的个人博客，发布一系列有趣的东西">
+<meta name="twitter:title" content="基于vagrant的lnmp环境使用Xdebug">
+<meta name="twitter:description" content="作为一名合格的php工程师，掌握调试程序的方法是必须要掌握的，而php的Xdebug是一项非常便利的debug工具。现在就让我们在基于vagrant环境下配置xdebug。">
+<meta name="twitter:image" content="http://ozy3pax09.bkt.clouddn.com/18-2-9/55046307.jpg">
 
 
 
@@ -132,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://kinano.top/archives/2017/11/"/>
+  <link rel="canonical" href="http://kinano.top/2018/02/09/phpstorm-use-xdebug-in-vagrant-dev/"/>
 
 
 
 
 
-  <title>归档 | kinano的博客</title>
+  <title>基于vagrant的lnmp环境使用Xdebug | kinano的博客</title>
   
 
 
@@ -173,7 +183,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -311,222 +321,213 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://kinano.top/2018/02/09/phpstorm-use-xdebug-in-vagrant-dev/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kinano">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avator.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kinano的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">基于vagrant的lnmp环境使用Xdebug</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-09T13:16:34+08:00">
+                2018-02-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 14 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/php/" itemprop="url" rel="index">
+                    <span itemprop="name">-php</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
+             <span id="/2018/02/09/phpstorm-use-xdebug-in-vagrant-dev/" class="leancloud_visitors" data-flag-title="基于vagrant的lnmp环境使用Xdebug">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/30/magical-fun/" itemprop="url">
-              
-                <span itemprop="name">PHP中魔术方法的使用</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-30T23:38:57+08:00"
-              content="2017-11-30" >
-          11-30
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/29/PHP-QRcode/" itemprop="url">
-              
-                <span itemprop="name">使用PHP生成二维码</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-29T22:36:24+08:00"
-              content="2017-11-29" >
-          11-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/25/CreateHexoBlog/" itemprop="url">
-              
-                <span itemprop="name">利用Hexo与github搭建方便的个人博客</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-25T09:12:58+08:00"
-              content="2017-11-25" >
-          11-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/25/Vagrant-lnmp/" itemprop="url">
-              
-                <span itemprop="name">基于Vagrant搭建lnmp开发环境</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-25T07:15:55+08:00"
-              content="2017-11-25" >
-          11-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>作为一名合格的php工程师，掌握调试程序的方法是必须要掌握的，而php的Xdebug是一项非常便利的debug工具。现在就让我们在基于vagrant环境下配置xdebug。<br><a id="more"></a></p>
+<h3 id="1-安装XDebug"><a href="#1-安装XDebug" class="headerlink" title="1.安装XDebug"></a>1.安装XDebug</h3><p>首先我们先复制phpinfo页（查看网页源码然后全选复制）的信息，然后到<a href="https://xdebug.org/" target="_blank" rel="noopener">XDebug</a>官网寻找对应的xdebug安装包。如下图的操作<br><img src="http://ozy3pax09.bkt.clouddn.com/18-2-9/55046307.jpg" alt=""><br><img src="http://ozy3pax09.bkt.clouddn.com/18-2-9/3650616.jpg" alt=""><br><img src="http://ozy3pax09.bkt.clouddn.com/18-2-9/57593709.jpg" alt=""><br>之后进入终端下载Xdebug源码包编译安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ wget https://xdebug.org/files/xdebug-2.6.0.tgz</span><br><span class="line">$ sudo tar -xvzf xdebug-2.6.0.tgz</span><br><span class="line">$ cd xdebug-2.6.0</span><br><span class="line">$ phpize</span><br><span class="line">$ ./configure</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br><span class="line">$ cp modules/xdebug.so /usr/lib/php/20151012</span><br></pre></td></tr></table></figure></p>
+<p>之后编辑php.ini配置文件，笔者的文件路径为/etc/php/7.0/fpm/php.ini,在最后一行做如下配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[XDebug]</span><br><span class="line">zend_extension = /usr/lib/php/20151012/xdebug.so</span><br><span class="line">xdebug.remote_enable = 1</span><br><span class="line">xdebug.remote_handler = &quot;dbgp&quot;</span><br><span class="line">xdebug.remote_connect_back = 1</span><br><span class="line">xdebug.scream = 0</span><br><span class="line">xdebug.show_local_vars = 1</span><br><span class="line">xdebug.remote_port = 9001</span><br><span class="line">xdebug.idekey = &quot;PHPSTORM&quot;</span><br><span class="line">xdebug.remote_log = &quot;/var/log/php-fpm/xdebug.log&quot;</span><br></pre></td></tr></table></figure></p>
+<p>这样Xdebug就安装配置完成了。</p>
+<h3 id="2-配置PHPSTORM"><a href="#2-配置PHPSTORM" class="headerlink" title="2.配置PHPSTORM"></a>2.配置PHPSTORM</h3><p>按如下图配置<br>1.<img src="http://ozy3pax09.bkt.clouddn.com/18-2-9/34396229.jpg" alt=""><br>2.<img src="http://ozy3pax09.bkt.clouddn.com/18-2-9/85717455.jpg" alt=""><br>3.<img src="http://ozy3pax09.bkt.clouddn.com/18-2-9/84896193.jpg" alt=""><br>之后编写一个测试文件进行测试如下图所示<br><img src="http://ozy3pax09.bkt.clouddn.com/18-2-9/72638932.jpg" alt=""><br>这样xdebug的配置就基本大功告成可以愉快的debug了。</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/25/Linuxlearn/" itemprop="url">
-              
-                <span itemprop="name">Linux学习</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-25T02:12:45+08:00"
-              content="2017-11-25" >
-          11-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+    
+
+    
+
+    
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/php/" rel="tag"># php</a>
+          
+            <a href="/tags/vagrant/" rel="tag"># vagrant</a>
+          
+            <a href="/tags/phpstorm/" rel="tag"># phpstorm</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/17/git-contact/" rel="next" title="Linux下使用git与github">
+                <i class="fa fa-chevron-left"></i> Linux下使用git与github
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -534,6 +535,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMTk5MS84NTU1"></div>
+    
+  </div>
+
 
         </div>
         
@@ -554,8 +561,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avator.jpg"
@@ -670,6 +686,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装XDebug"><span class="nav-number">1.</span> <span class="nav-text">1.安装XDebug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-配置PHPSTORM"><span class="nav-number">2.</span> <span class="nav-text">2.配置PHPSTORM</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -790,11 +822,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
 
   
@@ -824,6 +854,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

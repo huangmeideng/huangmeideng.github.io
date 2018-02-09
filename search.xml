@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[基于vagrant的lnmp环境使用Xdebug]]></title>
+    <url>%2F2018%2F02%2F09%2Fphpstorm-use-xdebug-in-vagrant-dev%2F</url>
+    <content type="text"><![CDATA[作为一名合格的php工程师，掌握调试程序的方法是必须要掌握的，而php的Xdebug是一项非常便利的debug工具。现在就让我们在基于vagrant环境下配置xdebug。 1.安装XDebug首先我们先复制phpinfo页（查看网页源码然后全选复制）的信息，然后到XDebug官网寻找对应的xdebug安装包。如下图的操作之后进入终端下载Xdebug源码包编译安装12345678$ wget https://xdebug.org/files/xdebug-2.6.0.tgz$ sudo tar -xvzf xdebug-2.6.0.tgz$ cd xdebug-2.6.0$ phpize$ ./configure$ make$ sudo make install$ cp modules/xdebug.so /usr/lib/php/20151012 之后编辑php.ini配置文件，笔者的文件路径为/etc/php/7.0/fpm/php.ini,在最后一行做如下配置12345678910[XDebug]zend_extension = /usr/lib/php/20151012/xdebug.soxdebug.remote_enable = 1xdebug.remote_handler = &quot;dbgp&quot;xdebug.remote_connect_back = 1xdebug.scream = 0xdebug.show_local_vars = 1xdebug.remote_port = 9001xdebug.idekey = &quot;PHPSTORM&quot;xdebug.remote_log = &quot;/var/log/php-fpm/xdebug.log&quot; 这样Xdebug就安装配置完成了。 2.配置PHPSTORM按如下图配置1.2.3.之后编写一个测试文件进行测试如下图所示这样xdebug的配置就基本大功告成可以愉快的debug了。]]></content>
+      <categories>
+        <category>-php</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+        <tag>vagrant</tag>
+        <tag>phpstorm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Linux下使用git与github]]></title>
     <url>%2F2018%2F01%2F17%2Fgit-contact%2F</url>
     <content type="text"><![CDATA[Linux下使用git与github现如今，git在工作中是必不可少的，有助于我们的团队开发与代码管理。现在就让我们安装git以及使用github。 安装git1$sudo apt-get install git 全局配置git12$git config --global user.name &quot;你的用户名&quot;$git config --global user.email &quot;你的邮箱名&quot; 生成秘钥1$ssh-keygen -t rsa -C &quot;你的邮箱&quot; 进入秘钥目录并赋值目录内容12$cd ~/.ssh$ vim id_rsa.pub 之后进入github页进行秘钥的配置 测试是否连接成功1$ssh -T git@github.com]]></content>
@@ -8,14 +21,14 @@
         <category>-Linux</category>
       </categories>
       <tags>
-        <tag>git</tag>
         <tag>github</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[nginx配置pathinfo访问模式以及多站点]]></title>
     <url>%2F2018%2F01%2F17%2Fnginx-set%2F</url>
-    <content type="text"><![CDATA[最近使用ThinkPHP,偏偏自己又使用nginx服务器。由于nginx无法使用pathinfo模式，给我带来了很大的困扰，几经周折终于解决了。所以打算记录一下，以免以后遇到相同的问题又满世界找答案。 nginx配置编写123456789101112131415161718192021server &#123; listen 80; #监听端口号 root /home/www/ShopServer/public; #TP5项目中index.php所在目录 index index.html index.php; #文件类型 server_name location; location /&#123; try_files $uri $uri/ /index.php?s=$uri; #核心配置，让本来的兼容模式转发为pathinfo &#125; location ~ \.php$ &#123; fastcgi_split_path_info ^(.+\.php)(/.+)$; fastcgi_pass 127.0.0.1:9000 fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; fastcgi_index index.php; include fastcgi_params; &#125;&#125; 这样就可以让nginx支持TP5的pathinfo模式了。 多站点设置在本地进行站点配置对web的开发是大有益处的，我们通过对不同项目的nginx配置可以实现多站点配置。12#进入nginx文件夹进行配置文件的编写$cd /etc/nginx 可以看到有很多文件夹，默认的启用配置文件夹在sites-enabled的default文件中，由于我们使用多站点配置，无需理会。我们要在conf.d文件夹中通过建立.conf的配置文件实现多站点。比如我们有两个TP5项目，tp1和tp2在/home/www中，这我们在conf.d文件夹中新建两个名为tp1.conf和tp2.conf的配置文件。分别为如下配置。 tp1.conf 123456789101112131415161718192021 server &#123; listen 80; #监听端口号 root /home/www/tp1/public; #TP5项目中index.php所在目录 index index.html index.php; #文件类型 server_name tp1.test; location /&#123; try_files $uri $uri/ /index.php?s=$uri; #核心配置，让本来的兼容模式转发为pathinfo &#125; location ~ \.php$ &#123; fastcgi_split_path_info ^(.+\.php)(/.+)$; fastcgi_pass 127.0.0.1:9000 fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; fastcgi_index index.php; include fastcgi_params; &#125;&#125; tp2.conf 123456789101112131415161718192021 server &#123; listen 80; #监听端口号 root /home/www/tp2/public; #TP5项目中index.php所在目录 index index.html index.php; #文件类型 server_name tp2.test; location /&#123; try_files $uri $uri/ /index.php?s=$uri; #核心配置，让本来的兼容模式转发为pathinfo &#125; location ~ \.php$ &#123; fastcgi_split_path_info ^(.+\.php)(/.+)$; fastcgi_pass 127.0.0.1:9000 fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; fastcgi_index index.php; include fastcgi_params; &#125;&#125; 然后在主机的host文件添加两个域名1234#我的主机为windows，故目录在c/windows/system32/drivers/etc/host127.0.0.1 tp1.test127.0.0.1 tp2.test 这样就实现了多站点，方便了调试。]]></content>
+    <content type="text"><![CDATA[最近使用ThinkPHP,偏偏自己又使用nginx服务器。由于nginx无法使用pathinfo模式，给我带来了很大的困扰，几经周折终于解决了。所以打算记录一下，以免以后遇到相同的问题又满世界找答案。 nginx配置编写12345678910111213141516171819202122232425262728293031323334353637383940414243server &#123; charset utf-8; client_max_body_size 128M; listen 80; server_name 127.0.0.1; root /home/www; index index.php; location ~* \.(eot|otf|ttf|woff)$ &#123; add_header Access-Control-Allow-Origin *; &#125; location / &#123; index index.html index.php; if ( -f $request_filename) &#123; break; &#125; if ( !-e $request_filename) &#123; rewrite ^/(.*)$ /index.php/$1 last; break; &#125; &#125; location ~ \.php &#123; set $script $uri; set $path_info &quot;&quot;; if ($uri ~ &quot;^(.+\.php)(/.+)&quot;) &#123; set $script $1; set $path_info $2; &#125; include fastcgi_params; fastcgi_index index.php?IF_REWRITE=1; fastcgi_pass 127.0.0.1:9000; fastcgi_param PATH_INFO $path_info; fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; fastcgi_param SCRIPT_NAME $script; try_files $uri =404; &#125; &#125; 这样就可以让nginx支持TP5的pathinfo模式了。 多站点设置在本地进行站点配置对web的开发是大有益处的，我们通过对不同项目的nginx配置可以实现多站点配置。12#进入nginx文件夹进行配置文件的编写$cd /etc/nginx 可以看到有很多文件夹，默认的启用配置文件夹在sites-enabled的default文件中，由于我们使用多站点配置，无需理会。我们要在conf.d文件夹中通过建立.conf的配置文件实现多站点。比如我们有两个TP5项目，tp1和tp2在/home/www中，这我们在conf.d文件夹中新建两个名为tp1.conf和tp2.conf的配置文件。分别为如下配置。 tp1.conf 12345678910111213141516171819202122232425262728293031323334353637383940414243server &#123; charset utf-8; client_max_body_size 128M; listen 80; server_name tp1.test; root /home/www/tp1/public; index index.php; location ~* \.(eot|otf|ttf|woff)$ &#123; add_header Access-Control-Allow-Origin *; &#125; location / &#123; index index.html index.php; if ( -f $request_filename) &#123; break; &#125; if ( !-e $request_filename) &#123; rewrite ^/(.*)$ /index.php/$1 last; break; &#125; &#125; location ~ \.php &#123; set $script $uri; set $path_info &quot;&quot;; if ($uri ~ &quot;^(.+\.php)(/.+)&quot;) &#123; set $script $1; set $path_info $2; &#125; include fastcgi_params; fastcgi_index index.php?IF_REWRITE=1; fastcgi_pass 127.0.0.1:9000; fastcgi_param PATH_INFO $path_info; fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; fastcgi_param SCRIPT_NAME $script; try_files $uri =404; &#125; &#125; tp2.conf 12345678910111213141516171819202122232425262728293031323334353637383940414243server &#123; charset utf-8; client_max_body_size 128M; listen 80; server_name tp2.test; root /home/www/tp2/public; index index.php; location ~* \.(eot|otf|ttf|woff)$ &#123; add_header Access-Control-Allow-Origin *; &#125; location / &#123; index index.html index.php; if ( -f $request_filename) &#123; break; &#125; if ( !-e $request_filename) &#123; rewrite ^/(.*)$ /index.php/$1 last; break; &#125; &#125; location ~ \.php &#123; set $script $uri; set $path_info &quot;&quot;; if ($uri ~ &quot;^(.+\.php)(/.+)&quot;) &#123; set $script $1; set $path_info $2; &#125; include fastcgi_params; fastcgi_index index.php?IF_REWRITE=1; fastcgi_pass 127.0.0.1:9000; fastcgi_param PATH_INFO $path_info; fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; fastcgi_param SCRIPT_NAME $script; try_files $uri =404; &#125; &#125; 然后在主机的host文件添加两个域名1234#我的主机为windows，故目录在c/windows/system32/drivers/etc/host127.0.0.1 tp1.test127.0.0.1 tp2.test 这样就实现了多站点，方便了调试。]]></content>
       <categories>
         <category>-运维</category>
       </categories>
@@ -125,8 +138,8 @@
         <category>-博客</category>
       </categories>
       <tags>
-        <tag>github</tag>
         <tag>hexo</tag>
+        <tag>github</tag>
       </tags>
   </entry>
   <entry>
@@ -138,9 +151,9 @@
       </categories>
       <tags>
         <tag>php</tag>
+        <tag>nginx</tag>
         <tag>容器</tag>
         <tag>linux</tag>
-        <tag>nginx</tag>
         <tag>mysql</tag>
       </tags>
   </entry>
